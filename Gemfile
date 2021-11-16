@@ -36,6 +36,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Gem for RSpec
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
