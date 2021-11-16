@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized, only: [:new, :create, :welcome]
   
-  def new
-  end
-
   def create
     @user = User.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
@@ -12,16 +9,6 @@ class SessionsController < ApplicationController
     else
       redirect_to '/login'
     end
-  end
-
-  def page_requires_login
-
-  end
-
-  def login
-  end
-
-  def welcome
   end
 
   def logout
