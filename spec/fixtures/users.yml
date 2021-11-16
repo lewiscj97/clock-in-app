@@ -3,4 +3,4 @@ mog:
   first_name: Moggy
   last_name: Mog
   email: moggymog@meowmail.com
-  password_digest: fish
+  password_digest: <%= BCrypt::Password.create('fish') %>

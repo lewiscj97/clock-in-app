@@ -1,13 +1,27 @@
 require 'rails_helper'
 
 RSpec.describe "Sessions", type: :request do
+  fixtures :all
 
-  fixtures :all 
-  describe "GET /create" do
-    it "returns http success" do
-      post "/login", params: {user: {email: 'moggymog@meowmail.com', password: 'fish'}}
-      expect(response).to have_http_status(:success)
+  describe "POST /login" do
+    it "Logs in a user successfully" do
+      post "/login", params: {email: 'moggymog@meowmail.com', password: 'fish'}
+      expect(response).to redirect_to('/welcome')
+    end
+
+    it "Redirects to the login page if details incorrect" do
+      post "/login", params: {email: 'moggymog@meowmail.com', password: 'incorrectpassword'}
+      expect(response).to redirect_to('/login')
     end
   end
 
+  describe "GET /logout" do
+    it "Resets the user_id in session storage to nil" do
+      post "/login", params: {email: 'moggymog@meowmail.com', password: 'fish'}
+      expect(session[:user_id]).to eq(1)
+      
+      get '/logout'
+      expect(session[:user_id]).to eq(nil)
+    end
+  end
 end
