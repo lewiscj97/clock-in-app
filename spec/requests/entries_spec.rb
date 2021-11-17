@@ -12,25 +12,4 @@ RSpec.describe EntriesController, type: :controller do
       expect(entry.entry_date).to eq(Date.today)
     end
   end
-
-  # describe "" do
-  #   it "" do
-  #     post "/login", params: {email: 'moggymog@meowmail.com', password: 'fish'}
-  #     expect(response).to redirect_to('/welcome')
-  #   end
-  # end
-
-  # describe "" do
-  #   it "" do
-  #     post "/login", params: {email: 'moggymog@meowmail.com', password: 'fish'}
-  #     expect(response).to redirect_to('/welcome')
-  #   end
-  # end
-
-  # describe "" do
-  #   it "" do
-  #     post "/login", params: {email: 'moggymog@meowmail.com', password: 'fish'}
-  #     expect(response).to redirect_to('/welcome')
-  #   end
-  # end
 end
