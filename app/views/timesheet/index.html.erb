@@ -12,39 +12,14 @@
   </thead>
   <tbody>
     <tr>
-      <th>AM Start</th>
-      <td><%= @monday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
-      <td><%= @tuesday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
-      <td><%= @wednesday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
-      <td><%= @thursday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
-      <td><%= @friday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
+      <% for i in 0..3 do   %>
+        <td><%= @monday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+        <td><%= @tuesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+        <td><%= @wednesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+        <td><%= @thursday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+        <td><%= @friday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+      <% end %>
     </tr>
 
-    <tr>
-      <th>AM Finish</th>
-      <td>12:00</td>
-      <td>12:00</td>
-      <td>12:00</td>
-      <td>12:00</td>
-      <td>12:00</td>
-    </tr>
-
-    <tr>
-      <th>PM Start</th>
-      <td>13:00</td>
-      <td>13:00</td>
-      <td>13:00</td>
-      <td>13:00</td>
-      <td>13:00</td>
-    </tr>
-
-    <tr>
-      <th>PM Finish</th>
-      <td>17:00</td>
-      <td>17:00</td>
-      <td>17:00</td>
-      <td>17:00</td>
-      <td>17:00</td>
-    </tr>
   </tbody>
 </table>
