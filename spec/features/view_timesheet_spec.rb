@@ -6,6 +6,6 @@ feature 'view timesheets' do
     login
     visit('/entries')
     click_button('View Timesheets')
-    expect(page).to have_content("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+    expect(page).to have_content("Monday")
   end
 end
