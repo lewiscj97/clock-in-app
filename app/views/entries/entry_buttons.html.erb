@@ -1,1 +1,5 @@
 <h1>Entries</h1>
+   <%= form_tag '/entries' do %>
+   <%= hidden_field_tag 'entry_type', 0 %>
+   <%= submit_tag "AM Start" %>
+<%end%>
