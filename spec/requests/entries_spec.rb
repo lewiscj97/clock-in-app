@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe EntriesController, type: :controller do
   fixtures :users
 
+  before(:all) {Entry.destroy_all}
+
   describe "creating an entry" do
     it "should create an entry" do
       allow(controller).to receive(:current_user) {users(:mog)}

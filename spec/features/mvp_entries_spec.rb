@@ -2,6 +2,7 @@ require 'rails_helper'
 
 feature 'Entries' do
   before(:each) { sign_in }
+  before(:all) {Entry.destroy_all}
 
   scenario 'A signed in user can clock in - AM start' do
     visit('/entries')
