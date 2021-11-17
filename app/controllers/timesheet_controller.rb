@@ -15,22 +15,21 @@ class TimesheetController < ApplicationController
     year = params[:year].to_i
     week_number = params[:week_number].to_i
 
-    monday = Date.commercial(year, week_number, 1).to_s
-    tuesday = Date.commercial(year, week_number, 2).to_s
-    wednesday = Date.commercial(year, week_number, 3).to_s
-    thursday = Date.commercial(year, week_number, 4).to_s
-    friday = Date.commercial(year, week_number, 5).to_s
+    weekdays = []
+
+    for i in 1..5 do
+      weekdays.push(Date.commercial(year, week_number, i).to_s)
+    end
 
     entries = current_user.entries
 
     @entry_types = ['AM Start', 'AM Finish', 'PM Start', 'PM Finish']
+    
+    @weekdays =[] 
 
-    @monday = entries.where(entry_date: monday)
-    @tuesday = entries.where(entry_date: tuesday)
-    @wednesday = entries.where(entry_date: wednesday)
-    @thursday = entries.where(entry_date: thursday)
-    @friday = entries.where(entry_date: friday)
-
+    for i in 0..4 do
+      @weekdays.push(entries.where(entry_date: weekdays[i]))
+    end
   end
 
 end
