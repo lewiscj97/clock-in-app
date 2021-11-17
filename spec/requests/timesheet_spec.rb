@@ -10,4 +10,12 @@ RSpec.describe TimesheetController, type: :controller do
       expect(response).to have_http_status(200)
     end
   end
+
+  describe "timesheet#week" do
+    it "should allow a user to select a specific week to view timesheet" do
+      allow(controller).to receive(:current_user) {users(:mog)}
+      post :week, params: {week: "2021-W46"}
+      expect(response).to redirect_to('/timesheet/2021/46')
+    end
+  end
 end
