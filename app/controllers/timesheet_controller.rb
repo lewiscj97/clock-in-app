@@ -32,4 +32,9 @@ class TimesheetController < ApplicationController
     end
   end
 
+  def week
+    p params
+    # take the week from parameters, convert it into a year and a week number
+    # Then redirect_to("timesheet/year/week_number")
+  end
 end

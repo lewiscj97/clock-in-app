@@ -1,4 +1,10 @@
 <h1>Timesheet</h1>
+
+<%= form_tag '/timesheet/week' do %>
+  <%= week_field_tag :week %>
+  <%= submit_tag 'Submit'%>
+<% end %>
+
 <table>
   <thead>
     <tr>
