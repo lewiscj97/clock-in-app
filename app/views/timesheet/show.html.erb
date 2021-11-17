@@ -1,5 +1,25 @@
-<%# To be replaced with stuff from the timesheet#index %>
-<br>
-<%= 'Year: ' + params[:year] %>
-<br>
-<%= 'Week Number: ' + params[:week_number]%>
+<h1>Timesheet</h1>
+<table>
+  <thead>
+    <tr>
+      <th scope='col'></th>
+      <th scope='col'>Monday</th>
+      <th scope='col'>Tuesday</th>
+      <th scope='col'>Wednesday</th>
+      <th scope='col'>Thursday</th>
+      <th scope='col'>Friday</th>
+    </tr>
+  </thead>
+  <tbody>
+      <% for i in 0..3 do %>
+        <tr>
+          <th><%= @entry_types[i] %></td>
+          <td><%= @monday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @tuesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @wednesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @thursday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @friday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>

@@ -14,7 +14,6 @@ feature 'view timesheets' do
 
   scenario 'A user can view a specific timesheet given the year and week number' do
     visit('/timesheet/2021/46')
-    expect(page).to have_content('15/11/21')
     expect(page).to have_content('Monday')
     expect(page).to have_content('09:00')
   end
