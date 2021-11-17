@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#logout'
   post '/entries', to: 'entries#create'
   get '/entries', to: 'entries#entry_buttons'
-  get '/timesheet', to: 'timesheet#index', as: 'timesheet'
+  get '/timesheet', to: 'timesheet#index'
+  get '/timesheet/:year/:week_number', to: 'timesheet#show'
 end
