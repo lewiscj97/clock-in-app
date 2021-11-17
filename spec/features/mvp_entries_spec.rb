@@ -53,8 +53,12 @@ feature 'Entries' do
     entries = Entry.all
     
     expect(entries[0].entry_time).to eq(Time.new(2000, 1, 1, 9, 0))
+    expect(entries[0].entry_type).to eq(0)
     expect(entries[1].entry_time).to eq(Time.new(2000, 1, 1, 12, 30))
+    expect(entries[1].entry_type).to eq(1)
     expect(entries[2].entry_time).to eq(Time.new(2000, 1, 1, 13, 0))
+    expect(entries[2].entry_type).to eq(2)
     expect(entries[3].entry_time).to eq(Time.new(2000, 1, 1, 17, 0))
+    expect(entries[3].entry_type).to eq(3)
   end
 end
