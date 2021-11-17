@@ -13,11 +13,11 @@
   <tbody>
     <tr>
       <th>AM Start</th>
-      <td>09:00</td>
-      <td>09:00</td>
-      <td>09:00</td>
-      <td>09:00</td>
-      <td>09:00</td>
+      <td><%= @monday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
+      <td><%= @tuesday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
+      <td><%= @wednesday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
+      <td><%= @thursday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
+      <td><%= @friday.where(entry_type:0).first.entry_time.strftime('%H:%M')%></td>
     </tr>
 
     <tr>
