@@ -17,4 +17,10 @@ feature 'view timesheets' do
     expect(page).to have_content('Monday')
     expect(page).to have_content('09:00')
   end
+
+  scenario 'Use can view specific timesheet that contains no data' do
+    visit('/timesheet/2021/45')
+    expect(page).to have_content('Monday')
+    expect(page).to have_content('-')
+  end
 end
