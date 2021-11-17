@@ -33,8 +33,7 @@ class TimesheetController < ApplicationController
   end
 
   def week
-    p params
-    # take the week from parameters, convert it into a year and a week number
-    # Then redirect_to("timesheet/year/week_number")
+    year, week_number = params[:week].split('-W')
+    redirect_to("/timesheet/#{year}/#{week_number}")
   end
 end
