@@ -37,5 +37,24 @@ feature 'Entries' do
     entry = Entry.all.first
     expect(entry.entry_date).to eq(Date.today)
     expect(entry.entry_type).to eq(3)
-  end 
+  end
+
+  scenario 'A user completes a typical day of work' do
+    visit('/entries')
+    travel_to DateTime.new(2021, 11, 17, 9, 0, 0)
+    click_button('AM Start')
+    travel_to DateTime.new(2021, 11, 17, 12, 30, 0)
+    click_button('AM Finish')
+    travel_to DateTime.new(2021, 11, 17, 13, 0, 0)
+    click_button('PM Start')
+    travel_to DateTime.new(2021, 11, 17, 17, 0, 0)
+    click_button('PM Finish')
+
+    entries = Entry.all
+    
+    expect(entries[0].entry_time).to eq(Time.new(2000, 1, 1, 9, 0))
+    expect(entries[1].entry_time).to eq(Time.new(2000, 1, 1, 12, 30))
+    expect(entries[2].entry_time).to eq(Time.new(2000, 1, 1, 13, 0))
+    expect(entries[3].entry_time).to eq(Time.new(2000, 1, 1, 17, 0))
+  end
 end
