@@ -2,6 +2,7 @@
 <table>
   <thead>
     <tr>
+      <th scope='col'></th>
       <th scope='col'>Monday</th>
       <th scope='col'>Tuesday</th>
       <th scope='col'>Wednesday</th>
@@ -10,15 +11,15 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <% for i in 0..3 do   %>
-        <td><%= @monday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
-        <td><%= @tuesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
-        <td><%= @wednesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
-        <td><%= @thursday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
-        <td><%= @friday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+      <% for i in 0..3 do %>
+        <tr>
+          <th><%= @entry_types[i] %></td>
+          <td><%= @monday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @tuesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @wednesday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @thursday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+          <td><%= @friday.where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
+        </tr>
       <% end %>
-    </tr>
-
   </tbody>
 </table>
