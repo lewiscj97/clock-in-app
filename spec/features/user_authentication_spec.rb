@@ -9,8 +9,7 @@ feature 'signing up' do
     fill_in(:user_email, with: 'joe.bloggs@123.com')
     fill_in(:user_password, with: 'password')
     click_button('Create User')
-    expect(page).to have_current_path('/welcome')
-    expect(page).to have_button('Sign out')
+    expect(page).to have_current_path('/entries')
   end 
 end
 
@@ -21,7 +20,7 @@ feature 'login' do
     fill_in(:email, with: 'moggymog@meowmail.com')
     fill_in(:password, with: 'fish')
     click_button('Login')
-    expect(page).to have_current_path('/welcome')
+    expect(page).to have_current_path('/entries')
   end 
 
   scenario 'a user cannot login to the application with incorrect details' do
@@ -41,6 +40,7 @@ feature 'logout' do
     fill_in(:email, with: 'moggymog@meowmail.com')
     fill_in(:password, with: 'fish')
     click_button('Login')
+    visit('/welcome')
     click_button('Sign out')
     expect(page).to have_current_path('/welcome')
     expect(page).to_not have_button('Sign out')
