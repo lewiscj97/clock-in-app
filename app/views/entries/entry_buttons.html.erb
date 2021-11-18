@@ -4,18 +4,7 @@
 </form>
 
 <%= form_tag '/entries' do %>
-   <%= hidden_field_tag 'entry_type', 0 %>
-   <%= submit_tag "AM Start" %>
-<%end%>
-<%= form_tag '/entries' do %>
-   <%= hidden_field_tag 'entry_type', 1 %>
-   <%= submit_tag "AM Finish" %>
-<%end%>
-<%= form_tag '/entries' do %>
-   <%= hidden_field_tag 'entry_type', 2 %>
-   <%= submit_tag "PM Start" %>
-<%end%>
-<%= form_tag '/entries' do %>
-   <%= hidden_field_tag 'entry_type', 3 %>
-   <%= submit_tag "PM Finish" %>
-<%end%>
+   <%= submit_tag "Make Entry" %>
+<% end %>
+
+<%= flash[:too_many_entries] %>
