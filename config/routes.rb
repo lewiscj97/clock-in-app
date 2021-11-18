@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   get '/timesheet', to: 'timesheet#index'
   get '/timesheet/:year/:week_number', to: 'timesheet#show'
   post '/timesheet/week', to: 'timesheet#week'
+  get '/timesheet/current', to: 'timesheet#current'
 end
