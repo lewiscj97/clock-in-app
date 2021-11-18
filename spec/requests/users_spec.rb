@@ -11,7 +11,7 @@ RSpec.describe "Users", type: :request do
   describe "POST /create" do
     it "redirect to the welcome page" do
       post "/users", params: {user: {first_name: 'Moggy', last_name: 'Mog', email: 'moggymog@meowmail.com', password: 'fish'}}
-      expect(response).to redirect_to('/welcome')
+      expect(response).to redirect_to('/entries')
     end
 
     it "creates a new user" do

@@ -6,7 +6,7 @@ RSpec.describe "Sessions", type: :request do
   describe "POST /login" do
     it "Logs in a user successfully" do
       post "/login", params: {email: 'moggymog@meowmail.com', password: 'fish'}
-      expect(response).to redirect_to('/welcome')
+      expect(response).to redirect_to('/entries')
     end
 
     it "Redirects to the login page if details incorrect" do

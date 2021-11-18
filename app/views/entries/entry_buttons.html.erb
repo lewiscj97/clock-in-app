@@ -1,4 +1,8 @@
 <h1>Entries</h1>
+<form action='/timesheet/current'>
+   <input type='submit' value='View Timesheets'>
+</form>
+
 <%= form_tag '/entries' do %>
    <%= hidden_field_tag 'entry_type', 0 %>
    <%= submit_tag "AM Start" %>

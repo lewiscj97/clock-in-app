@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :users, only: [:new, :create]
+  root 'entries#entry_buttons'
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/welcome', to: 'sessions#welcome'
@@ -7,4 +8,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#logout'
   post '/entries', to: 'entries#create'
   get '/entries', to: 'entries#entry_buttons'
+  get '/timesheet/:year/:week_number', to: 'timesheet#show'
+  post '/timesheet/week', to: 'timesheet#week'
+  get '/timesheet/current', to: 'timesheet#current'
 end

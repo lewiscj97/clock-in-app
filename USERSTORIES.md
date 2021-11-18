@@ -1,5 +1,5 @@
 # User Stories
-## MVP (aim: Thursday 18th November)
+## MVP (completed: Wednesday 17th November)
 
 ```
 As a user
@@ -32,18 +32,12 @@ So that I can see when I clocked in and out
 I want to view my timesheet
 ```
 
-## Iteration One (aim: Monday 22nd November)
+## Iteration One (aim: Friday 19th November)
 
 ```
 As a user
 So that I can easily record my time
 I want to use a single button to record all entries
-```
-
-```
-As a user
-So that I only have to clock in and out once
-I want a default lunch break
 ```
 
 ```
@@ -58,7 +52,13 @@ So that the code is high quality
 I want an automated testing suite to run on pushing to GitHub
 ```
 
-## Iteration Two (aim: Thursday 25th November)
+## Iteration Two (aim: Wednesday 24th November)
+
+```
+As a user
+So that I can change my clocked in values
+I want to edit my timesheet entries
+```
 
 ```
 As a user
@@ -66,13 +66,19 @@ So that I can easily submit my timesheets
 I want to export my timesheets
 ```
 
+## Nice to haves
+
+```
+As a user
+So that I only have to clock in and out once
+I want a default lunch break
+```
+
 ```
 As a user
 So that my timesheets are accurate
 I want the app to automatically clock me out at a set time
 ```
-
-## Nice to haves
 
 ```
 As a developer
