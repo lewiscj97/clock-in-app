@@ -31,4 +31,11 @@ feature 'view timesheets' do
     click_button('Submit')
     expect(page).to have_current_path('/timesheet/2021/46')
   end
+
+  scenario 'User can click a button to go to the entries page' do
+    visit('/timesheet/2021/46')
+    expect(page).to have_button('Back')
+    click_button('Back')
+    expect(page).to have_current_path('/entries')
+  end
 end
