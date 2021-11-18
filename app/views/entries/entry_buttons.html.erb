@@ -1,10 +1,9 @@
-<h1>Entries</h1>
 <form action='/timesheet/current'>
-   <input type='submit' value='View Timesheets'>
+   <input class='entries-button' type='submit' value='View Timesheets'>
 </form>
 
 <%= form_tag '/entries' do %>
-   <%= submit_tag "Make Entry" %>
+   <%= submit_tag "Make Entry", class: 'big-round-button' %>
 <% end %>
 
 <%= flash[:too_many_entries] %>

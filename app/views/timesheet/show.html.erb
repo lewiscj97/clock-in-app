@@ -1,8 +1,6 @@
-<h1>Timesheet</h1>
-
 <%= form_tag '/timesheet/week' do %>
   <%= week_field_tag :week %>
-  <%= submit_tag 'Submit'%>
+  <%= submit_tag 'Submit', class: 'timesheet-button'%>
 <% end %>
 
 <table>
@@ -33,5 +31,5 @@
 </table>
 
 <form action='/entries'>
-   <input type='submit' value='Back'>
+   <input class='timesheet-button' type='submit' value='Back'>
 </form>

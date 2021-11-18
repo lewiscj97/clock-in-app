@@ -1,9 +1,10 @@
-<h1>Welcome</h1>
 
+<h1>Clock In App</h1>
+<h2>Record and Export Timesheets</h2>
 <% if logged_in? %>
     <h1>You are Logged In, <%= current_user.first_name %></h1>
-    <%= button_to "Sign out", '/logout', method: :get%>
+    <%= button_to "Sign out", '/logout', method: :get, class: 'welcome-button'%>
 <% else %>
-    <%= button_to "Log In", '/login', method: :get%>
-    <%= button_to "Register", '/users/new', method: :get%>
+    <%= button_to "Log In", '/login', method: :get, class: 'welcome-button' %>
+    <%= button_to "Register", '/users/new', method: :get, class: 'welcome-button' %>
 <% end %>
