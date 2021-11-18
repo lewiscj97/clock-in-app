@@ -29,7 +29,7 @@
 }
 
 .navbar {
-  font-size: 0.8em;
+  font-size: 1em;
   list-style-type: none;
   display: flex;
   margin: 0;
@@ -140,6 +140,10 @@
 
 @media (max-width: 800px) {
   .timesheet {
+    font-size: 0.8em;
+  }
+
+  .navbar {
     font-size: 0.8em;
   }
 }
