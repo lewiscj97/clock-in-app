@@ -1,0 +1,39 @@
+.timesheet-background {
+  position: fixed;
+  width: 105%;
+  margin: -2%;
+  height: 5000%; 
+  background-color: #cbeff5;
+  background-repeat: repeat;
+}
+
+.timesheet-container {
+  height: 70%;
+  width: 45%;
+  border-radius: 10%;
+  display: flex;
+  border-style: groove;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.timesheet-button {
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.2s;
+  margin: 5px;
+}
+
+.timesheet-button:hover {
+  background-color: #9b9e9c;
+  color: white;
+  cursor: pointer;
+}

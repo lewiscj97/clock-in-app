@@ -29,6 +29,7 @@
 }
 
 .navbar {
+  z-index: 10000;
   font-size: 1em;
   list-style-type: none;
   display: flex;
@@ -59,80 +60,7 @@
   margin-left: auto;
 }
 
-.welcome-button {
-  background-color: #cbeff5; 
-  border: none;
-  border-radius: 4px;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition-duration: 0.2s;
-  font: 0.8em sans-serif;
-  margin: 1em;
-  padding: 1em 1em;
-}
 
-.welcome-button:hover {
-  background-color: #24d5f2;
-  color: white;
-  cursor: pointer;
-}
-
-.entries-button {
-  background-color: #cbeff5; 
-  border: none;
-  border-radius: 4px;
-  color: black;
-  text-align: center;
-  text-decoration: none;
-  
-  transition-duration: 0.2s;
-  font: 0.8em sans-serif;
-  margin: 1em;
-  padding: 1em 1em;
-}
-
-.entries-button:hover {
-  background-color: #24d5f2;
-  color: white;
-  cursor: pointer;
-}
-
-.big-round-button {
-  border-radius: 50%;
-  height: 10em;
-  width: 10em;
-  margin: 2em;
-  background-color: #cbeff5; 
-  border-style: none;
-  transition-duration: 0.2s;
-}
-
-.big-round-button:hover {
-  cursor: pointer;
-  background-color: #24d5f2;
-  color: white;
-}
-
-.timesheet-button {
-  background-color: #e7e7e7;
-  border: none;
-  border-radius: 4px;
-  color: black;
-  padding: 0.5em 1em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  transition-duration: 0.2s;
-  margin: 5px;
-}
-
-.timesheet-button:hover {
-  background-color: #9b9e9c;
-  color: white;
-  cursor: pointer;
-}
 
 .timesheet {
   font-size: 1em;

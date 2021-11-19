@@ -1,0 +1,40 @@
+
+.login-box {
+  height: 90%;
+  width: 20%;
+  border-radius: 10%;
+  display: flex;
+  border-style: groove;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+}
+
+.login-background {
+  position: fixed;
+  width: 105%;
+  margin: -2%;
+  height: 5000%; 
+  background-color: #cbeff5;
+  background-repeat: repeat;
+}
+
+.welcome-button {
+  background-color: #cbeff5; 
+  border: none;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.2s;
+  font: 0.8em sans-serif;
+  margin: 1em;
+  padding: 1em 1em;
+}
+
+.welcome-button:hover {
+  background-color: #24d5f2;
+  color: white;
+  cursor: pointer;
+}

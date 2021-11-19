@@ -1,12 +1,21 @@
-<section class="container">
-   <div class="box">
-      <h1>Login</h1>
-      <%= form_tag '/login' do %>
-         <%= label_tag :email%>
-         <%= text_field_tag :email %><br><br>
-         <%= label_tag :password%>
-         <%= password_field_tag :password%><br><br>
-         <%= submit_tag "Log In"%>
-      <%end%>
-   </div>
-</section>
+<style>
+   .navbar{
+  display: none;
+  visibility: hidden;
+   }
+</style>
+
+<div class="login-background">
+   <section class="container">
+      <div class="login-box">
+         <h1>Login</h1>
+         <%= form_tag '/login' do %>
+            <div><%= label_tag :email%></div>
+            <%= text_field_tag :email %><br><br>
+            <div><%= label_tag :password%></div>
+            <%= password_field_tag :password%><br><br>
+            <%= submit_tag "Log In"%>
+         <%end%>
+      </div>
+   </section>
+</div>
