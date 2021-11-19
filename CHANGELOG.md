@@ -2,6 +2,13 @@
 
 ## 19/11/21
 
+* feature/show-current-week-on-timesheet
+  * Week commencing date shown on timesheet
+  * Current week shown in week input field
+  * user cannot access timesheets before 2021
+
+## 19/11/21
+
 * styling/create-nav-bar
   * Created navbar for signing out, viewing timesheets and making entries when user is logged in
   * Used flexboxes for centering content and considered mobile accessibility
