@@ -6,6 +6,9 @@
   * User can export the weekly timesheet as an Excel file
   * This file is in the correct format for inputting directly into the DWP timesheet
 
+Comments:
+* Additionally changed tests where the Entry fixtures were destroyed to retain fixtures throughout the test suite
+
 ## 19/11/21
 
 * styling/create-nav-bar
