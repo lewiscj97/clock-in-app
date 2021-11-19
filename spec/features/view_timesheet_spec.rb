@@ -53,4 +53,9 @@ feature 'view timesheets' do
     week_input = find('#week')
     expect(week_input.value).to eq('2021-W42')
   end
+
+  scenario 'App redirects to start of 2021 if timesheet prior to 2021 accessed through url' do
+    visit('/timesheet/2020/1')
+    expect(page).to have_current_path('/timesheet/2021/1')
+  end
 end
