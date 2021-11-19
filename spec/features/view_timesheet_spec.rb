@@ -43,4 +43,14 @@ feature 'view timesheets' do
     visit('/timesheet/2021/46')
     expect(page).to have_content('Week Commencing: 15/11/21')
   end
+
+  scenario 'The week number is shown in the week form' do
+    visit('/timesheet/2021/46')
+    week_input = find('#week')
+    expect(week_input.value).to eq('2021-W46')
+
+    visit('/timesheet/2021/42')
+    week_input = find('#week')
+    expect(week_input.value).to eq('2021-W42')
+  end
 end
