@@ -38,4 +38,9 @@ feature 'view timesheets' do
     click_button('Back')
     expect(page).to have_current_path('/entries')
   end
+
+  scenario 'The week commencing date is shown on the page' do
+    visit('/timesheet/2021/46')
+    expect(page).to have_content('Week Commencing: 2021-11-15')
+  end
 end

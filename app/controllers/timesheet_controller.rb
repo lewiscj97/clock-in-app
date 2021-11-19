@@ -12,6 +12,7 @@ class TimesheetController < ApplicationController
     entries = current_user.entries
 
     @entry_types = ['AM Start', 'AM Finish', 'PM Start', 'PM Finish']
+    @week_commencing = weekdays.first
     
     @weekdays = [] 
 
