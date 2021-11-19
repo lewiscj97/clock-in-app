@@ -34,7 +34,7 @@ gem 'simplecov-console', require: false, group: :test
 # For exporting as excel file
 gem 'caxlsx'
 gem 'caxlsx_rails'
-gem "spreadsheet", "0.6.5.8"
+gem 'rubyXL'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

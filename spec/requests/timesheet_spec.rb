@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'spreadsheet'
 
 RSpec.describe TimesheetController, type: :controller do
   fixtures :users, :entries
