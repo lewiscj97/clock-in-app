@@ -33,6 +33,8 @@
       </tbody>
     </table>
 
+    <%= link_to 'Download as Excel', show_timesheet_path(format: :xlsx) %>
+
     <form action='/entries'>
       <input class='timesheet-button' type='submit' value='Back'>
     </form>
