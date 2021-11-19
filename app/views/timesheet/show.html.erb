@@ -33,7 +33,7 @@
       </tbody>
     </table>
 
-    <%= link_to 'Download as Excel', show_timesheet_path(format: :xlsx) %>
+    <%= button_to 'Export', show_timesheet_path(format: :xlsx), method: :get, class: 'timesheet-button' %>
 
     <form action='/entries'>
       <input class='timesheet-button' type='submit' value='Back'>

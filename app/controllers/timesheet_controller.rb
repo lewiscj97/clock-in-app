@@ -14,7 +14,7 @@ class TimesheetController < ApplicationController
     @entry_types = ['AM Start', 'AM Finish', 'PM Start', 'PM Finish']
     @days_of_the_week = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
     @week_commencing = weekdays.first
-    
+
     @weekdays = [] 
 
     for i in 0..4 do
@@ -22,7 +22,10 @@ class TimesheetController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { render 'show' }
+      format.html do
+        render 'show'
+      end
+      
       format.xlsx do
         response.headers['Content-Disposition'] = "attachment; filename=#{Date.today}-timesheet-#{year}-#{week_number}.xlsx"
       end
