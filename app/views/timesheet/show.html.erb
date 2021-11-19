@@ -22,7 +22,7 @@
             <tr>
               <th><%= @entry_types[i] %></td>
               <% for j in 0..4 do %>
-                <% if @weekdays[j].where(entry_type:i).first.nil? %>
+                <% if @weekdays[j].where(entry_type:i).empty? %>
                   <td>-</td>
                 <% else %>
                   <td><%= @weekdays[j].where(entry_type:i).first.entry_time.strftime('%H:%M')%></td>
