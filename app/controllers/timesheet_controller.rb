@@ -4,9 +4,6 @@ class TimesheetController < ApplicationController
     week_number = params[:week_number].to_i
     @year_week_string = "#{year}-W#{params[:week_number]}"
 
-    # Stop user from accessing timesheets from before 2021
-    redirect_to('/timesheet/2021/1') if year < 2021
-
     # Collection of dates in 'yyyy-mm-dd' format
     weekdays = []
 
@@ -29,6 +26,8 @@ class TimesheetController < ApplicationController
 
     respond_to do |format|
       format.html do
+        # Stop user from accessing timesheets from before 2021
+        redirect_to('/timesheet/2021/1') and return if year < 2021
         render 'show'
       end
       
