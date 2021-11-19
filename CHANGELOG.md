@@ -8,6 +8,10 @@
 
 Comments:
 * Additionally changed tests where the Entry fixtures were destroyed to retain fixtures throughout the test suite
+* feature/show-current-week-on-timesheet
+  * Week commencing date shown on timesheet
+  * Current week shown in week input field
+  * user cannot access timesheets before 2021
 
 ## 19/11/21
 

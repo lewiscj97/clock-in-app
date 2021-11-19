@@ -1,10 +1,11 @@
 <section class="container">
   <div class="box">
     <%= form_tag '/timesheet/week' do %>
-      <%= week_field_tag :week %>
+      <%= week_field_tag :week, @year_week_string, min: '2021-W01' %>
       <%= submit_tag 'Submit', class: 'timesheet-button'%>
     <% end %>
     <br>
+    <h2>Week Commencing: <%= format_date_yyyy_mm_dd_as_dd_mm_yy(@week_commencing) %></h2>
     <table class='timesheet'>
       <thead>
         <tr>
