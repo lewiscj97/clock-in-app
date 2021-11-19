@@ -3,7 +3,7 @@ class TimesheetController < ApplicationController
     year = params[:year].to_i
     week_number = params[:week_number].to_i
 
-    @year_week_string = "#{year}-W#{week_number}"
+    @year_week_string = "#{year}-W#{params[:week_number]}"
 
     weekdays = []
 
