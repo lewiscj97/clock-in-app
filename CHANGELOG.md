@@ -2,6 +2,12 @@
 
 ## 19/11/21
 
+* feature/export-timesheet
+  * User can export the weekly timesheet as an Excel file
+  * This file is in the correct format for inputting directly into the DWP timesheet
+
+## 19/11/21
+
 * styling/create-nav-bar
   * Created navbar for signing out, viewing timesheets and making entries when user is logged in
   * Used flexboxes for centering content and considered mobile accessibility
