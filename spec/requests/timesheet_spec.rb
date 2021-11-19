@@ -10,6 +10,11 @@ RSpec.describe TimesheetController, type: :controller do
       post :show, params: { year: '2021', week_number: 42 }
       expect(response).to have_http_status(200)
     end
+
+    it "returns a spreadsheet" do
+      post :show, params: { year: '2021', week_number: '46' }, format: :xlsx
+      expect(response.headers['Content-Disposition']).to eq("attachment; filename=#{Date.today}-timesheet-2021-46.xlsx")
+    end
   end
 
   describe "timesheet#week" do
