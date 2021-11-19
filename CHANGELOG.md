@@ -1,5 +1,25 @@
 # Changelog
 
+## 19/11/21
+
+* styling/create-nav-bar
+  * Created navbar for signing out, viewing timesheets and making entries when user is logged in
+  * Used flexboxes for centering content and considered mobile accessibility
+
+## 18/11/21
+
+* feature/single-button-for-entries
+  * User can make timesheet entries using a single button
+  * Logic to determine which entry the user is making (i.e. AM Start, AM Finish, etc.)
+
+## 18/11/21
+
+* feature/view-timesheets
+  * User can view their timesheet for the current week
+  * User can navigate between different weeks through a form
+  * Fixtures and seed data added for dev and test environments
+  * Redirects to the `/entries` page rather than `/welcome` when signing in
+
 ## 17/11/21
 
 * feature/add-entries
