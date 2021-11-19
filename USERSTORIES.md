@@ -46,12 +46,6 @@ So that the website is accessible on the internet
 I want the app to be hosted on Heroku
 ```
 
-```
-As a devloper
-So that the code is high quality
-I want an automated testing suite to run on pushing to GitHub
-```
-
 ## Iteration Two (aim: Wednesday 24th November)
 
 ```
@@ -96,4 +90,9 @@ I want to use Okta Verify for user authentication
 As a user
 So that I can easily access `clock-in-app`
 I want to interact with it using Slack
+```
+```
+As a devloper
+So that the code is high quality
+I want an automated testing suite to run on pushing to GitHub
 ```
