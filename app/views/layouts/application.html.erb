@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ClockInApp</title>
+    <title>Clock In App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,14 @@
   </head>
 
   <body>
+    <ul class='navbar'>
+      <li><a href='/entries' class='navbar-link'>Clock In App</a></li>
+      <% if logged_in? %>
+        <li class="navbar-push"><a class='navbar-link' href='/entries'>Clock In/Out</a></li>
+        <li><a class='navbar-link' href='/timesheet/current'>Timesheets</a></li>
+        <li><a class='navbar-link' href='/logout'>Sign Out</a></li>
+      <% end %>
+    </ul>
     <%= yield %>
   </body>
 </html>
