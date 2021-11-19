@@ -2,7 +2,7 @@
 <section class="container">
   <div class="box">
     <%= form_tag '/timesheet/week' do %>
-      <%= week_field_tag :week, @year_week_string%>
+      <%= week_field_tag :week, @year_week_string, min: '2021-W01' %>
       <%= submit_tag 'Submit', class: 'timesheet-button'%>
     <% end %>
     <br>
