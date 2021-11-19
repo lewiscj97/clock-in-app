@@ -8,10 +8,10 @@ wb.add_worksheet(name: "Timesheet") do |sheet|
   @weekdays.each_with_index do |day, index|
     sheet.add_row [
       @days_of_the_week[index],
-      day.where(entry_type: 0).empty? ? '-' : day.where(entry_type: 0).first.entry_time.strftime('%H:%M'),
-      day.where(entry_type: 1).empty? ? '-' : day.where(entry_type: 1).first.entry_time.strftime('%H:%M'),
-      day.where(entry_type: 2).empty? ? '-' : day.where(entry_type: 2).first.entry_time.strftime('%H:%M'),
-      day.where(entry_type: 3).empty? ? '-' : day.where(entry_type: 3).first.entry_time.strftime('%H:%M')
+      format_empty_entries(day, 0),
+      format_empty_entries(day, 1),
+      format_empty_entries(day, 2),
+      format_empty_entries(day, 3)
     ]
   end
 end
