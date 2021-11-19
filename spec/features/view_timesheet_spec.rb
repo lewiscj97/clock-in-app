@@ -41,6 +41,6 @@ feature 'view timesheets' do
 
   scenario 'The week commencing date is shown on the page' do
     visit('/timesheet/2021/46')
-    expect(page).to have_content('Week Commencing: 2021-11-15')
+    expect(page).to have_content('Week Commencing: 15/11/21')
   end
 end
