@@ -31,3 +31,16 @@ feature 'Show user total daily times' do
     expect(page).to have_content('4:30')
   end
 end
+
+feature 'Show user total weekly time' do
+  fixtures :entries
+  
+  before(:each) do
+    login
+  end
+
+  scenario 'Full timesheet weekly time shown' do
+    visit('/timesheet/2021/46')
+    expect(page).to have_content('34:59')
+  end
+end

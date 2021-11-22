@@ -50,4 +50,13 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(helper.daily_total_time_worked(day)).to eq ' 0:00'
     end
   end
+
+  describe '#weekly_total_time' do
+    it 'returns the weekly total time worked' do
+      dates = ['2021-11-15', '2021-11-16', '2021-11-17', '2021-11-18', '2021-11-19', ]
+      week = dates.map { |date| Entry.where(entry_date: date) }
+      
+      expect(weekly_total_time(week)).to eq('34:59')
+    end
+  end
 end
