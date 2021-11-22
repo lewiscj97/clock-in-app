@@ -2,6 +2,12 @@
 
 ## 22/11/21
 
+* feature/edit-timesheet-entries
+  * User is able to edit an entry that they have already made
+  * User is able to create a new entry where there is currently a blank entry
+
+## 22/11/21
+
 * fix/failing-tests
   * Some tests were failing as the current Dates/Times were not stubbed
   * Stubbed Time for 2x tests
