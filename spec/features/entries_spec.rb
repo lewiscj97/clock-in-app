@@ -6,6 +6,13 @@ feature 'Entries' do
     allow(Date).to receive(:today) { Date.new(2021, 12, 25) }
   end
 
+  scenario 'A signed in user can see the current time' do
+    allow(Time).to receive(:now) { Time.new(2021, 12, 25, 9, 0, 0) }
+    visit('/entries')
+    expect(page).to have_content("The time is 09:00")
+  end 
+
+
   scenario 'A signed in user can clock in - AM start' do
     visit('/entries')
     click_button('Make Entry')

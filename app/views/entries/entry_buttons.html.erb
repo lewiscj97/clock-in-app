@@ -1,11 +1,11 @@
 <section class="container">
    <div class="box">
-      <form action='/timesheet/current'>
-         <input class='entries-button' type='submit' value='View Timesheets'>
-      </form>
-
       <%= form_tag '/entries' do %>
-         <%= submit_tag "Make Entry", class: 'big-round-button' %>
+         <%= submit_tag "Make Entry", class: 'big-round-button' %> <br>
+
+      <form action='/timesheet/current'>
+         <%= "The time is #{Time.now.strftime("%H:%M")}" %> 
+      </form>
       <% end %>
 
       <br>
