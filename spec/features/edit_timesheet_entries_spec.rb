@@ -14,4 +14,14 @@ feature 'Edit entries' do
     click_on('09:01')
     expect(page).to have_current_path('/timesheet/2021/46/2021-11-15/0')
   end
+
+  scenario 'A user can edit any entry on their timesheet' do
+    visit('/timesheet/2021/46')
+    click_on('09:01')
+    expect(page).to have_content('09:01')
+    fill_in :time, with: '09:32'
+    click_button('Submit')
+    expect(page).to have_current_path('/timesheet/2021/46')
+    expect(page).to have_content('09:32')
+  end
 end
