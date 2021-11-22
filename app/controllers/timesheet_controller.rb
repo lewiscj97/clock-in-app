@@ -18,10 +18,10 @@ class TimesheetController < ApplicationController
     @week_commencing = weekdays.first
     
     # Collection of entries for each day
-    @weekdays = [] 
+    @weekday_entries = [] 
 
     for i in 0..4 do
-      @weekdays.push(entries.where(entry_date: weekdays[i]))
+      @weekday_entries.push(entries.where(entry_date: weekdays[i]))
     end
 
     respond_to do |format|

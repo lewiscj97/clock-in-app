@@ -5,7 +5,7 @@ wb.add_worksheet(name: "Timesheet") do |sheet|
   # Create the header row
   sheet.add_row ["Day", "AM Start", "AM Finish", "PM Start", "PM Finish"]
   # Create entries for each item
-  @weekdays.each_with_index do |day, index|
+  @weekday_entries.each_with_index do |day, index|
     sheet.add_row [
       @days_of_the_week[index],
       format_entries(day, 0),
