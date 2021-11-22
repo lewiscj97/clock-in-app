@@ -8,11 +8,29 @@ module ApplicationHelper
   end
 
   def daily_total_time_worked(day)
-    am_start = Time.zone.parse(day.where(entry_type: 0).first.entry_time.strftime('%H:%M'))
-    am_finish = Time.zone.parse(day.where(entry_type: 1).first.entry_time.strftime('%H:%M'))
-    pm_start = Time.zone.parse(day.where(entry_type: 2).first.entry_time.strftime('%H:%M'))
-    pm_finish = Time.zone.parse(day.where(entry_type: 3).first.entry_time.strftime('%H:%M'))
+    time = Time.zone.at(0)
 
-    Time.zone.at((am_finish - am_start) + (pm_finish - pm_start)).strftime('%k:%M')
+    if day.count == 4
+      am = calculate_am(day)
+      pm = calculate_pm(day)
+  
+      time += Time.zone.at(am + pm)
+    elsif day.count == 0
+      return ' 0:00'
+    elsif day.where(entry_type: 2).empty? == true || day.where(entry_type: 3).empty? == true
+      time += calculate_am(day)
+    elsif day.where(entry_type: 0).empty? == true || day.where(entry_type: 1).empty? == true
+      time += calculate_pm(day)
+    end
+
+    return time.strftime('%k:%M')
+  end
+
+  def calculate_am(day)
+    day.where(entry_type: 1).first.entry_time - day.where(entry_type: 0).first.entry_time
+  end
+
+  def calculate_pm(day)
+    day.where(entry_type: 3).first.entry_time - day.where(entry_type: 2).first.entry_time
   end
 end

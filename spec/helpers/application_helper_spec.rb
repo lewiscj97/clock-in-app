@@ -28,5 +28,26 @@ RSpec.describe ApplicationHelper, type: :helper do
       day = Entry.where(entry_date: '2021-11-15')
       expect(helper.daily_total_time_worked(day)).to eq ' 6:59'  
     end
+
+    it 'returns the total time when only am values filled in' do
+      Entry.create(user_id: 1, entry_date: Date.new(2021,12,15), entry_type: 0, entry_time: Time.new(2000,1,1,9,0,0))
+      Entry.create(user_id: 1, entry_date: Date.new(2021,12,15), entry_type: 1, entry_time: Time.new(2000,1,1,12,30,0))
+      day = Entry.where(entry_date: '2021-12-15')
+
+      expect(helper.daily_total_time_worked(day)).to eq ' 3:30'
+    end
+
+    it 'returns the total time when only am values filled in' do
+      Entry.create(user_id: 1, entry_date: Date.new(2021,12,15), entry_type: 2, entry_time: Time.new(2000,1,1,13,0,0))
+      Entry.create(user_id: 1, entry_date: Date.new(2021,12,15), entry_type: 3, entry_time: Time.new(2000,1,1,17,30,0))
+      day = Entry.where(entry_date: '2021-12-15')
+
+      expect(helper.daily_total_time_worked(day)).to eq ' 4:30'
+    end
+    
+    it 'returns 0:00 when no entries made' do
+      day = Entry.where(entry_date: '2021-12-16')
+      expect(helper.daily_total_time_worked(day)).to eq ' 0:00'
+    end
   end
 end
