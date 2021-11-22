@@ -41,8 +41,7 @@ module ApplicationHelper
   def format_minutes_in_hhmm(minutes)
     hours = minutes / 60
     mins = minutes % 60
-    mins = '00' if mins == 0
-    return "#{hours}:#{mins}" 
+    return "#{hours}:#{mins.to_s.rjust(2, "0")}" 
   end
 
   def calculate_am(day)
