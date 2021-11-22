@@ -23,9 +23,9 @@
               <th><%= @entry_types[i] %></td>
               <% for j in 0..4 do %>
                 <% if @weekday_entries[j].where(entry_type: i).empty? %>
-                  <td>-</td>
+                  <td><a href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>>-</a></td>
                 <% else %>
-                  <td><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></td>
+                  <td><a href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></a></td>
                 <% end %>
               <% end %>
             </tr>
