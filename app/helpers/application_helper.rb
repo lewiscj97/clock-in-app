@@ -15,12 +15,12 @@ module ApplicationHelper
       pm = calculate_pm(day)
   
       time += Time.zone.at(am + pm)
-    elsif day.count == 0
-      return ' 0:00'
-    elsif day.where(entry_type: 2).empty? == true || day.where(entry_type: 3).empty? == true
+    elsif !day.where(entry_type: 0).first.nil? && !day.where(entry_type: 1).first.nil?
       time += calculate_am(day)
-    elsif day.where(entry_type: 0).empty? == true || day.where(entry_type: 1).empty? == true
+    elsif !day.where(entry_type: 2).first.nil? && !day.where(entry_type: 3).first.nil?
       time += calculate_pm(day)
+    else
+      return ' 0:00'
     end
 
     return time.strftime('%k:%M')
