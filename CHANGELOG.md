@@ -1,4 +1,10 @@
 # Changelog
+## 22/11/21
+
+* feature/current-time-on-entry-page
+  * Current time is displayed on entry page.
+  * Removed view timesheet button from entry page.
+  * Completed feature test, and sorted timesheet button test.
 
 ## 22/11/21
 

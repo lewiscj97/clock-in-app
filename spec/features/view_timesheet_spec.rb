@@ -8,7 +8,7 @@ feature 'view timesheets' do
   scenario 'a user can view timesheets' do
     allow(Time).to receive(:now) { Time.new(2021, 11, 15, 9, 0, 0) }
     visit('/entries')
-    click_button('View Timesheets')
+    click_link('Timesheets')
     expect(page).to have_content("Monday")
     expect(page).to have_content("09:00")
   end
