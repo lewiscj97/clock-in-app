@@ -1,10 +1,14 @@
-<h1>Edit entry time</h1>
-<%= form_for @entry, url: '/timesheet/edit' do |f|%>
-  <%= hidden_field_tag 'entry_date', @entry.entry_date %>
-  <%= hidden_field_tag 'entry_type', @entry.entry_type %>
-  <%= hidden_field_tag 'year', params[:year] %>
-  <%= hidden_field_tag 'week', params[:week_number] %>
-  <%= f.label :entry_time %><br>
-  <%= f.time_field :entry_time %><br>
-  <%= f.submit 'Submit'%>
-<% end %>
+<section class="container">
+  <div class="box">
+    <h1>Edit entry time</h1>
+    <%= form_for @entry, url: '/timesheet/edit' do |f|%>
+      <%= hidden_field_tag 'entry_date', @entry.entry_date %>
+      <%= hidden_field_tag 'entry_type', @entry.entry_type %>
+      <%= hidden_field_tag 'year', params[:year] %>
+      <%= hidden_field_tag 'week', params[:week_number] %>
+      <%= f.label :entry_time %><br>
+      <%= f.time_field :entry_time %><br>
+      <%= f.submit 'Submit'%>
+    <% end %>
+  </div>
+</section>
