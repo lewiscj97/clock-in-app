@@ -1,4 +1,11 @@
 # Changelog
+
+## 22/11/21
+
+* feature/updated-one-click-button
+  * Added individual flash messages for each entry type
+  * Disabled button once all entries are made each day
+
 ## 22/11/21
 
 * feature/current-time-on-entry-page

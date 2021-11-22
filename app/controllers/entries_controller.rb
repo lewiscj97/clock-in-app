@@ -15,15 +15,7 @@ class EntriesController < ApplicationController
     when 3
       @entry = current_user.entries.create(entry_time: Time.now, entry_date: Date.today, entry_type: users_entries_for_the_day.count)
       flash[:entries_message] = 'You have clocked out PM'
-    else
-      flash[:entries_message] = 'Too many entries'
     end
-
-    # if users_entries_for_the_day.count <= 3
-    #   @entry = current_user.entries.create(entry_time: Time.now, entry_date: Date.today, entry_type: users_entries_for_the_day.count)
-    # else
-    #   flash[:too_many_entries] = 'Too many entries'
-    # end
 
     redirect_to '/entries'
   end
