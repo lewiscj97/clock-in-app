@@ -32,16 +32,6 @@ RSpec.describe TimesheetController, type: :controller do
     end
   end
 
-  describe "timesheet#patch_edit" do
-    it 'updates the entry time and redirects to the timesheet' do
-      patch :patch_edit, params: {year: '2021', week: '46', entry_date: '2021-11-15', entry_type: 0, entry: {entry_time: '09:35:00'}}
-      entry = Entry.where(entry_date: '2021-11-15', entry_type: '0').first
-      
-      expect(response).to redirect_to('/timesheet/2021/46')
-      expect(entry.entry_time).to eq Time.new(2000, 1, 1, 9, 35)
-    end
-  end
-
   describe "timesheet#post_edit" do
     it 'updates the entry time and redirects to the timesheet' do
       post :post_edit, params: {year: '2021', week: '47', entry_date: '2021-11-22', entry_type: 0, entry: {entry_time: '09:35:00'}}
