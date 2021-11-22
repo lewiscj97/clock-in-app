@@ -49,6 +49,7 @@ class TimesheetController < ApplicationController
   end
 
   def edit_entry
+   @entry = Entry.where(entry_date: params[:date], entry_type: params[:entry_type]).first_or_create
   end
   
 end

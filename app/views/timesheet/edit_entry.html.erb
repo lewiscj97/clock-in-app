@@ -1,0 +1,6 @@
+<h1>Edit entry time</h1>
+<%= form_for @entry do |f|%>
+  <%= f.label :entry_time%><br>
+  <%= f.time_field :entry_time%><br>
+  <%= f.submit 'Submit'%>
+<% end %>
