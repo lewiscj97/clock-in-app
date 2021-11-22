@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   post '/timesheet/week', to: 'timesheet#week'
   get '/timesheet/current', to: 'timesheet#current'
   get '/timesheet/:year/:week_number/:date/:entry_type', to: 'timesheet#edit_entry'
-
+  patch '/timesheet/edit', to: 'timesheet#patch_edit'
+  post '/timesheet/edit', to: 'timesheet#post_edit'
 end
