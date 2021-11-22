@@ -47,4 +47,8 @@ class TimesheetController < ApplicationController
     year = Time.now.strftime('%Y')
     redirect_to("/timesheet/#{year}/#{week_number}")
   end
+
+  def edit_entry
+  end
+  
 end
