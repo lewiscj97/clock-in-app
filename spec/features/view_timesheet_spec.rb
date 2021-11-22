@@ -6,6 +6,7 @@ feature 'view timesheets' do
   before(:each) { login }
 
   scenario 'a user can view timesheets' do
+    allow(Time).to receive(:now) { Time.new(2021, 11, 15, 9, 0, 0) }
     visit('/entries')
     click_button('View Timesheets')
     expect(page).to have_content("Monday")

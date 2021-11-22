@@ -1,5 +1,11 @@
 # Changelog
 
+## 22/11/21
+
+* fix/failing-tests
+  * Some tests were failing as the current Dates/Times were not stubbed
+  * Stubbed Time for 2x tests
+
 ## 19/11/21
 
 * feature/export-timesheet

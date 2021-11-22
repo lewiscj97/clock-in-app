@@ -7,6 +7,7 @@ feature 'Exporting Timesheets' do
   end
 
   scenario 'A signed in user can clock in - AM start' do
+    allow(Date).to receive(:today) { Date.new(2021, 11, 19) }
     visit('/timesheet/2021/46')
     click_button('Export')
     expect(page).to have_current_path('/timesheet/2021/46.xlsx')
