@@ -26,6 +26,25 @@ module ApplicationHelper
     return time.strftime('%k:%M')
   end
 
+  def weekly_total_time(week)
+    total = 0
+    
+    week.each do |day|
+      total += daily_total_time_worked(day).split(':').map(&:to_i).inject(0) { |a, b| a * 60 + b }
+    end
+
+    format_minutes_in_hhmm(total)
+  end
+
+  private
+
+  def format_minutes_in_hhmm(minutes)
+    hours = minutes / 60
+    mins = minutes % 60
+    mins = '00' if mins == 0
+    return "#{hours}:#{mins}" 
+  end
+
   def calculate_am(day)
     day.where(entry_type: 1).first.entry_time - day.where(entry_type: 0).first.entry_time
   end

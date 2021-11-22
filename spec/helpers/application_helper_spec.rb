@@ -58,5 +58,12 @@ RSpec.describe ApplicationHelper, type: :helper do
       
       expect(weekly_total_time(week)).to eq('34:59')
     end
+
+    it 'returns the weekly total time worked as 00:00' do
+      dates = ['2021-11-22', '2021-11-23', '2021-11-24', '2021-11-25', '2021-11-26', ]
+      week = dates.map { |date| Entry.where(entry_date: date) }
+      
+      expect(weekly_total_time(week)).to eq('0:00')
+    end
   end
 end
