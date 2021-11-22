@@ -22,5 +22,11 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(format_date_yyyy_mm_dd_as_dd_mm_yy('2021-11-16')).to eq('16/11/21')
     end
   end
-end
 
+  describe "#daily_total_time_worked" do
+    it 'returns the total time worked when passed all the entries for a day' do
+      day = Entry.where(entry_date: '2021-11-15')
+      expect(helper.daily_total_time_worked(day)).to eq ' 6:59'  
+    end
+  end
+end
