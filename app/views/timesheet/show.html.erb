@@ -39,7 +39,7 @@
       </tbody>
     </table>
 
-    <h3 id='weekly-total-time'>Total: <%= weekly_total_time(@weekday_entries) %></h3>
+    <h3 id='weekly-total-time'>Weekly Total: <%= weekly_total_time(@weekday_entries) %></h3>
 
     <%= button_to 'Export', show_timesheet_path(format: :xlsx), method: :get, class: 'timesheet-button' %>
 
