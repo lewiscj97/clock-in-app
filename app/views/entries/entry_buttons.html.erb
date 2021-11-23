@@ -1,6 +1,7 @@
 <section class="container">
-   <div class="box">
+   <div class="entries-box">
       <h2><%= "Current time: #{Time.now.strftime("%H:%M")}" %></h2>
+
       <%= form_tag '/entries' do %>
          <% case current_user.entries.where(entry_date: Date.today).count%>
          <% when 0, 2%>

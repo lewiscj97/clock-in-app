@@ -1,20 +1,20 @@
 <section class="container">
-  <div class="box">
+  <div class="timesheet-box">
     <%= form_tag '/timesheet/week' do %>
+    <br>
       <%= week_field_tag :week, @year_week_string, min: '2021-W01' %>
       <%= submit_tag 'Submit', class: 'timesheet-button'%>
     <% end %>
-    <br>
     <h2>Week Commencing: <%= format_date_yyyy_mm_dd_as_dd_mm_yy(@week_commencing) %></h2>
     <table class='timesheet'>
       <thead>
         <tr>
           <th scope='col'></th>
-          <th scope='col'>Monday</th>
-          <th scope='col'>Tuesday</th>
-          <th scope='col'>Wednesday</th>
-          <th scope='col'>Thursday</th>
-          <th scope='col'>Friday</th>
+          <th scope='col' class='table-header'>Monday</th>
+          <th scope='col' class='table-header'>Tuesday</th>
+          <th scope='col' class='table-header'>Wednesday</th>
+          <th scope='col' class='table-header'>Thursday</th>
+          <th scope='col' class='table-header'>Friday</th>
         </tr>
       </thead>
       <tbody>
@@ -23,13 +23,14 @@
               <th><%= @entry_types[i] %></td>
               <% for j in 0..4 do %>
                 <% if @weekday_entries[j].where(entry_type: i).empty? %>
-                  <td><a href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>>-</a></td>
+                  <td><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>>-</a></td>
                 <% else %>
-                  <td><a href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></a></td>
+                  <td><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></a></td>
                 <% end %>
               <% end %>
             </tr>
           <% end %>
+          <tr class='blank-row'></tr>
           <tr>
             <th>Total:</td>
             <% @weekday_entries.each do |day| %>
@@ -48,4 +49,3 @@
     </form>
   </div>
 </section>
-

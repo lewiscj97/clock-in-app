@@ -12,7 +12,7 @@
 
   <body>
     <ul class='navbar'>
-      <li><a href='/entries' class='navbar-link'>Clock In App</a></li>
+      <li><a href='/entries' class='navbar-link' id='navbar-image'><%= image_tag 'cat.png', class: 'navbar-logo' %><h1 id='navbar-title'>Clock in cats</h1></a></li>
       <% if logged_in? %>
         <li class="navbar-push"><a class='navbar-link' href='/entries'>Clock In/Out</a></li>
         <li><a class='navbar-link' href='/timesheet/current'>Timesheets</a></li>

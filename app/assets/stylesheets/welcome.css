@@ -1,0 +1,31 @@
+.welcome-box {
+  height: 20em;
+  width: 20em;
+  border-radius: 30px;
+  display: flex;
+  border-style: solid;
+  border-width: 1px;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+}
+
+.welcome-button {
+  background-color: #cbeff5; 
+  border: none;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.2s;
+  font: 0.8em sans-serif;
+  margin: 1em;
+  padding: 1em 1em;
+}
+
+.welcome-button:hover {
+  background-color: #24d5f2;
+  color: white;
+  cursor: pointer;
+}

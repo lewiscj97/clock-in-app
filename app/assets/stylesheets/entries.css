@@ -1,0 +1,50 @@
+
+.entries-box {
+  margin-top: 3em;
+  height: 20em;
+  width: 20em;
+  display: flex;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.entries-button {
+  background-color: #cbeff5; 
+  border: none;
+  border-radius: 4px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  
+  transition-duration: 0.2s;
+  font: 0.8em sans-serif;
+  margin: 1em;
+  padding: 1em 1em;
+}
+
+.entries-button:hover {
+  background-color: #24d5f2;
+  color: white;
+  cursor: pointer;
+}
+
+.big-round-button {
+  border-radius: 50%;
+  height: 6em;
+  width: 6em;
+  background-color: #cbeff5; 
+  border-style: none;
+  transition-duration: 0.2s;
+  font-size: 2em;
+}
+
+.big-round-button:hover {
+  cursor: pointer;
+  background-color: #24d5f2;
+  color: white;
+}

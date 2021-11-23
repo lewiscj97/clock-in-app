@@ -1,16 +1,25 @@
+<style>
+   .navbar{
+  display: none;
+  visibility: hidden;
+   }
+</style>
+
 <section class="container">
-   <div class="box">
-      <h1>Login</h1>
+   <div class="login-box">
+      <h1 class="custom-title-text">Clock In App</h1>
+      <h3>Login</h3>
       <%= form_tag '/login' do %>
-         <%= label_tag :email%>
+         <%= label_tag :email, "Email:", id: "email-label"%>
          <%= text_field_tag :email %><br><br>
-         <%= label_tag :password%>
+         <%= label_tag :password, "Password:"%>
          <%= password_field_tag :password%><br><br>
-         <%= submit_tag "Log In"%>
+         <%= submit_tag "Log In", class: 'login-button'%>
       <%end%>
       <%= flash[:incorrect_login] %>
       <br>
       <p>Don't have an account?</p>
-      <%= button_to "Register", '/users/new', method: :get%>
+      <%= button_to "Register", '/users/new', method: :get, class: 'login-button'%>
    </div>
 </section>
+
