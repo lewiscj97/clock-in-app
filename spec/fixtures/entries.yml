@@ -2,7 +2,7 @@ monday_am_start:
   user_id: 1
   entry_type: 0
   entry_date: <%= Date.new(2021, 11, 15) %>
-  entry_time: <%= Time.new(2021, 11, 15, 9, 0, 0) %>
+  entry_time: <%= Time.new(2021, 11, 15, 9, 1, 0) %>
 
 monday_am_finish:
   user_id: 1

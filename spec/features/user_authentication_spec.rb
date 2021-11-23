@@ -11,6 +11,14 @@ feature 'signing up' do
     click_button('Create Account')
     expect(page).to have_current_path('/entries')
   end 
+
+  feature 'register on login page' do
+    scenario 'a user can click register in the login page to go and create a new account' do
+      visit('/welcome')
+      click_button('Register')
+      expect(page).to have_current_path('/users/new')
+    end 
+  end
 end
 
 feature 'login' do
@@ -30,6 +38,7 @@ feature 'login' do
     fill_in(:password, with: 'paws')
     click_button('Log In')
     expect(page).to have_current_path('/login')
+    expect(page).to have_content("Invalid Credentials")
   end 
 end
 

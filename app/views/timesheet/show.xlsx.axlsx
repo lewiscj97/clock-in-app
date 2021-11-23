@@ -1,0 +1,17 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Timesheet") do |sheet|
+  sheet.add_row ['W/C', "#{@week_commencing}"]
+  # Create the header row
+  sheet.add_row ["Day", "AM Start", "AM Finish", "PM Start", "PM Finish"]
+  # Create entries for each item
+  @weekday_entries.each_with_index do |day, index|
+    sheet.add_row [
+      @days_of_the_week[index],
+      format_entries(day, 0),
+      format_entries(day, 1),
+      format_entries(day, 2),
+      format_entries(day, 3)
+    ]
+  end
+end

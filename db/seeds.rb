@@ -8,6 +8,21 @@
 
 User.create(id: 1, email: 'moggymog@meowmail.com', first_name: 'Moggy', last_name: 'Mog', password_digest: BCrypt::Password.create('fish'))
 
+# Partial Week
+Entry.create(user_id: 1, entry_type: 2, entry_date: Date.new(2021, 11, 10), entry_time: Time.new(2021, 11, 10, 13, 0, 0))
+Entry.create(user_id: 1, entry_type: 3, entry_date: Date.new(2021, 11, 10), entry_time: Time.new(2021, 11, 10, 17, 0, 0))
+
+Entry.create(user_id: 1, entry_type: 0, entry_date: Date.new(2021, 11, 11), entry_time: Time.new(2021, 11, 11, 9, 0, 0))
+Entry.create(user_id: 1, entry_type: 1, entry_date: Date.new(2021, 11, 11), entry_time: Time.new(2021, 11, 11, 12, 0, 0))
+Entry.create(user_id: 1, entry_type: 2, entry_date: Date.new(2021, 11, 11), entry_time: Time.new(2021, 11, 11, 13, 0, 0))
+Entry.create(user_id: 1, entry_type: 3, entry_date: Date.new(2021, 11, 11), entry_time: Time.new(2021, 11, 11, 17, 0, 0))
+
+Entry.create(user_id: 1, entry_type: 0, entry_date: Date.new(2021, 11, 12), entry_time: Time.new(2021, 11, 12, 9, 0, 0))
+Entry.create(user_id: 1, entry_type: 1, entry_date: Date.new(2021, 11, 12), entry_time: Time.new(2021, 11, 12, 12, 0, 0))
+Entry.create(user_id: 1, entry_type: 2, entry_date: Date.new(2021, 11, 12), entry_time: Time.new(2021, 11, 12, 13, 0, 0))
+Entry.create(user_id: 1, entry_type: 3, entry_date: Date.new(2021, 11, 12), entry_time: Time.new(2021, 11, 12, 17, 0, 0))
+
+# Full Week
 Entry.create(user_id: 1, entry_type: 0, entry_date: Date.new(2021, 11, 15), entry_time: Time.new(2021, 11, 15, 9, 0, 0))
 Entry.create(user_id: 1, entry_type: 1, entry_date: Date.new(2021, 11, 15), entry_time: Time.new(2021, 11, 15, 12, 0, 0))
 Entry.create(user_id: 1, entry_type: 2, entry_date: Date.new(2021, 11, 15), entry_time: Time.new(2021, 11, 15, 13, 0, 0))
