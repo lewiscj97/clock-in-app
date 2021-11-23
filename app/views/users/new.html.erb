@@ -19,8 +19,11 @@
         <%= f.text_field :last_name%><br><br>
         <%= f.label :password%><br>
         <%= f.password_field :password%><br><br>
-        <%= f.submit 'Create Account'%>
+        <%= f.submit 'Create Account'%><br><br>
       <%end%>
+
+      <p>Already have an account?</p>
+         <%= button_to "Log In", '/login', method: :get%>
     </div>
   </section>
 </div>
