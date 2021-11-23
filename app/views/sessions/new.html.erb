@@ -5,23 +5,21 @@
    }
 </style>
 
-<div class="login-background">
-   <section class="container">
-      <div class="login-box">
-         <h1 class="custom-title-text">Clock In App</h1>
-         <h3>Login</h3>
-         <%= form_tag '/login' do %>
-            <%= label_tag :email, "Email:", id: "email-label"%>
-            <%= text_field_tag :email %><br><br>
-            <%= label_tag :password, "Password:"%>
-            <%= password_field_tag :password%><br><br>
-            <%= submit_tag "Log In"%>
-         <%end%>
-         <%= flash[:incorrect_login] %>
-         <br>
-         <p>Don't have an account?</p>
-         <%= button_to "Register", '/users/new', method: :get%>
-      </div>
-   </section>
-</div>
+<section class="container">
+   <div class="login-box">
+      <h1 class="custom-title-text">Clock In App</h1>
+      <h3>Login</h3>
+      <%= form_tag '/login' do %>
+         <%= label_tag :email, "Email:", id: "email-label"%>
+         <%= text_field_tag :email %><br><br>
+         <%= label_tag :password, "Password:"%>
+         <%= password_field_tag :password%><br><br>
+         <%= submit_tag "Log In"%>
+      <%end%>
+      <%= flash[:incorrect_login] %>
+      <br>
+      <p>Don't have an account?</p>
+      <%= button_to "Register", '/users/new', method: :get%>
+   </div>
+</section>
 

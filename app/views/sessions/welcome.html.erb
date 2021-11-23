@@ -5,20 +5,16 @@
    }
 </style>
 
-<div class="welcome-background">   
-    <section class="container">
-        <div class="box">
-            <h1>Clock In App</h1>
-            <h2>Record and Export Timesheets</h2>
-            <% if logged_in? %>
-                <h1>You are Logged In, <%= current_user.first_name %></h1>
-                <%= button_to "Sign out", '/logout', method: :get, class: 'welcome-button'%>
-            <% else %>
-                <div class="welcome-container">
-                    <%= button_to "Log In", '/login', method: :get, class: 'welcome-button' %>
-                    <%= button_to "Register", '/users/new', method: :get, class: 'welcome-button' %>
-                </div>
-            <% end %>
-        </div>
-    </section>
-</div>
+<section class="container">
+    <div class="welcome-box">
+        <h1>Clock In App</h1>
+        <h2>Record and Export Timesheets</h2>
+        <% if logged_in? %>
+            <h1>You are Logged In, <%= current_user.first_name %></h1>
+            <%= button_to "Sign out", '/logout', method: :get, class: 'welcome-button'%>
+        <% else %>
+            <%= button_to "Log In", '/login', method: :get, class: 'welcome-button' %>
+            <%= button_to "Register", '/users/new', method: :get, class: 'welcome-button' %>
+        <% end %>
+    </div>
+</section>
