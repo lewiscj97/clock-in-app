@@ -12,13 +12,11 @@ feature 'signing up' do
     expect(page).to have_current_path('/entries')
   end 
 
-  feature 'register on login page' do
-    scenario 'a user can click register in the login page to go and create a new account' do
-      visit('/welcome')
-      click_button('Register')
-      expect(page).to have_current_path('/users/new')
-    end 
-  end
+  scenario 'a user can click register in the login page to go and create a new account' do
+    visit('/welcome')
+    click_button('Register')
+    expect(page).to have_current_path('/users/new')
+  end 
 end
 
 feature 'login' do
@@ -40,6 +38,12 @@ feature 'login' do
     expect(page).to have_current_path('/login')
     expect(page).to have_content("Invalid Credentials")
   end 
+
+  scenario 'a user can click login button on registration page' do
+    visit('/users/new')
+    click_button('Log In')
+    expect(page).to have_current_path('/login')
+  end
 end
 
 feature 'logout' do
