@@ -28,6 +28,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.error-message {
+  margin: 2px auto;
+  text-transform: capitalize;
+  width: 90%;
+  background-color: #FFFF33;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
 .navbar {
   font-size: 1em;
   list-style-type: none;
