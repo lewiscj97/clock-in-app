@@ -1,15 +1,3 @@
-.welcome-container {
-  height: 70%;
-  width: 100%;
-  border-radius: 10%;
-  display: flex;
-  border-style: groove;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-}
-
 .welcome-box {
   height: 20em;
   width: 20em;

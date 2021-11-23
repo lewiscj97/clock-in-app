@@ -1,52 +1,51 @@
-<div class="timesheet-background">
-  <section class="container">
-    <div class="timesheet-container">
-      <%= form_tag '/timesheet/week' do %>
-        <%= week_field_tag :week, @year_week_string, min: '2021-W01' %>
-        <%= submit_tag 'Submit', class: 'timesheet-button'%>
-      <% end %>
-      <br>
-      <h2>Week Commencing: <%= format_date_yyyy_mm_dd_as_dd_mm_yy(@week_commencing) %></h2>
-      <table class='timesheet'>
-        <thead>
-          <tr>
-            <th scope='col'></th>
-            <th scope='col'>Monday</th>
-            <th scope='col'>Tuesday</th>
-            <th scope='col'>Wednesday</th>
-            <th scope='col'>Thursday</th>
-            <th scope='col'>Friday</th>
-          </tr>
-        </thead>
-        <tbody>
-            <% for i in 0..3 do %>
-              <tr>
-                <th><%= @entry_types[i] %></td>
-                <% for j in 0..4 do %>
-                  <% if @weekday_entries[j].where(entry_type: i).empty? %>
-                    <td><a href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>>-</a></td>
-                  <% else %>
-                    <td><a href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></a></td>
-                  <% end %>
-                <% end %>
-              </tr>
-            <% end %>
+<section class="container">
+  <div class="timesheet-box">
+    <%= form_tag '/timesheet/week' do %>
+      <%= week_field_tag :week, @year_week_string, min: '2021-W01' %>
+      <%= submit_tag 'Submit', class: 'timesheet-button'%>
+    <% end %>
+    <br>
+    <h2>Week Commencing: <%= format_date_yyyy_mm_dd_as_dd_mm_yy(@week_commencing) %></h2>
+    <table class='timesheet'>
+      <thead>
+        <tr>
+          <th scope='col'></th>
+          <th scope='col'>Monday</th>
+          <th scope='col'>Tuesday</th>
+          <th scope='col'>Wednesday</th>
+          <th scope='col'>Thursday</th>
+          <th scope='col'>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% for i in 0..3 do %>
             <tr>
-              <th>Total:</td>
-              <% @weekday_entries.each do |day| %>
-                <th><%= daily_total_time_worked(day) %></th>
+              <th><%= @entry_types[i] %></td>
+              <% for j in 0..4 do %>
+                <% if @weekday_entries[j].where(entry_type: i).empty? %>
+                  <td><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>>-</a></td>
+                <% else %>
+                  <td><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></a></td>
+                <% end %>
               <% end %>
             </tr>
-        </tbody>
-      </table>
+          <% end %>
+          <tr class='blank-row'></tr>
+          <tr>
+            <th>Total:</td>
+            <% @weekday_entries.each do |day| %>
+              <th><%= daily_total_time_worked(day) %></th>
+            <% end %>
+          </tr>
+      </tbody>
+    </table>
 
-      <h3 id='weekly-total-time'>Weekly Total: <%= weekly_total_time(@weekday_entries) %></h3>
+    <h3 id='weekly-total-time'>Weekly Total: <%= weekly_total_time(@weekday_entries) %></h3>
 
-      <%= button_to 'Export', show_timesheet_path(format: :xlsx), method: :get, class: 'timesheet-button' %>
+    <%= button_to 'Export', show_timesheet_path(format: :xlsx), method: :get, class: 'timesheet-button' %>
 
-      <form action='/entries'>
-        <input class='timesheet-button' type='submit' value='Back'>
-      </form>
-    </div>
-  </section>
-</div>
+    <form action='/entries'>
+      <input class='timesheet-button' type='submit' value='Back'>
+    </form>
+  </div>
+</section>
