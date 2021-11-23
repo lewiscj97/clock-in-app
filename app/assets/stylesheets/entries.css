@@ -1,10 +1,12 @@
 
 .entries-container {
-  margin-top: 5%;
-  height: 70%;
-  width: 20%;
+  margin-top: 3em;
+  height: 20em;
+  width: 20em;
   display: flex;
-  border-style: groove;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 30px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -33,12 +35,12 @@
 
 .big-round-button {
   border-radius: 50%;
-  height: 10em;
-  width: 10em;
-  margin: 2em;
+  height: 6em;
+  width: 6em;
   background-color: #cbeff5; 
   border-style: none;
   transition-duration: 0.2s;
+  font-size: 2em;
 }
 
 .big-round-button:hover {
