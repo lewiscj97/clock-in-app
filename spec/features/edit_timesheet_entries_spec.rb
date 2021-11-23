@@ -26,7 +26,7 @@ feature 'Edit entries' do
 
   scenario 'A user can edit an empty entry' do
     visit('/timesheet/2021/47')
-    find(:xpath, "/html/body/div/section/div/table/tbody/tr[1]/td[1]/a").click
+    find(:xpath, "/html/body/section/div/table/tbody/tr[1]/td[1]/a").click
     expect(page).to have_current_path('/timesheet/2021/47/2021-11-22/0')
     fill_in :time, with: '09:30'
     click_button('Submit')
