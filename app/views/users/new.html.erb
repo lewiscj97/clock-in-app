@@ -1,12 +1,26 @@
-<h1>Sign Up</h1>
-<%= form_for @user do |f|%>
-  <%= f.label :email%><br>
-  <%= f.text_field :email%><br>
-  <%= f.label :first_name%><br>
-  <%= f.text_field :first_name%><br>
-  <%= f.label :last_name%><br>
-  <%= f.text_field :last_name%><br>
-  <%= f.label :password%><br>
-  <%= f.password_field :password%><br>
-  <%= f.submit 'Create Account'%>
-<%end%>
+<style>
+   .navbar{
+  display: none;
+  visibility: hidden;
+   }
+</style>
+
+<div class="register-background">
+  <section class="container">
+    <div class="register-box">
+      <h2 class="register-title-text">Clock In App</h2>
+      <h2>Register</h2>
+      <%= form_for @user do |f|%>
+        <%= f.label :email%><br>
+        <%= f.text_field :email%><br>
+        <%= f.label :first_name%><br>
+        <%= f.text_field :first_name%><br>
+        <%= f.label :last_name%><br>
+        <%= f.text_field :last_name%><br>
+        <%= f.label :password%><br>
+        <%= f.password_field :password%><br>
+        <%= f.submit 'Create Account'%>
+      <%end%>
+    </div>
+  </section>
+</div>
