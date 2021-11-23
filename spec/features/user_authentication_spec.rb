@@ -38,6 +38,7 @@ feature 'login' do
     fill_in(:password, with: 'paws')
     click_button('Log In')
     expect(page).to have_current_path('/login')
+    expect(page).to have_content("Invalid Credentials")
   end 
 end
 
