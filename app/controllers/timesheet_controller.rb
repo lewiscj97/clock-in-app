@@ -49,11 +49,11 @@ class TimesheetController < ApplicationController
   end
 
   def edit_entry
-    @entry = current_user.entries.where(entry_date: params[:date], entry_type: params[:entry_type]).first_or_create
+    @entry = current_user.entries.where(entry_date: params[:date], entry_type: params[:entry_type]).first_or_initialize
   end
 
   def post_edit
-    entry = current_user.entries.where(entry_date: params[:entry_date], entry_type: params[:entry_type]).first_or_create
+    entry = current_user.entries.where(entry_date: params[:entry_date], entry_type: params[:entry_type]).first_or_initialize
     entry.entry_time = params.require(:entry)[:entry_time]
     entry.save
     redirect_to("/timesheet/#{params[:year]}/#{params[:week]}")

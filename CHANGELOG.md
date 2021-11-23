@@ -2,6 +2,12 @@
 
 ## 23/11/21
 
+* feature/format_current_entry_time_on_edit_view
+  * Fixed breaking bug which was due to the `.first_or_create` method used when editing entries. If the user edited a blank entry and did not complete the process, the site hit a null pointer exception. This was fixed by using `.first_or_initialize`, which does not create a new value until the user enters a new time
+  * Store times in HH:MM format When creating new entries, in order to stop showing milliseconds when editing times
+
+## 23/11/21
+
 * feature/incorrect-login-flash-message
   * Added incorrect login flash message
   * Wrote test to check for it
