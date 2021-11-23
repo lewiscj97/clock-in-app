@@ -115,6 +115,16 @@
   color: white;
 }
 
+.big-round-button-disabled {
+  border-radius: 50%;
+  height: 10em;
+  width: 10em;
+  margin: 2em;
+  background-color: lightgray;
+  border-style: none;
+  color: black;
+}
+
 .timesheet-button {
   background-color: #e7e7e7;
   border: none;
