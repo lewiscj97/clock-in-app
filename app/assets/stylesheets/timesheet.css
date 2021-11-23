@@ -43,9 +43,12 @@
   width: 8em;
 }
 
+#week {
+  width: 12em;
+}
+
 @media (max-width: 800px) {
   .timesheet-box {
     height: 30em;
-  }
-  
+  } 
 }
