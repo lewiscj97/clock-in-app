@@ -8,5 +8,8 @@
          <%= password_field_tag :password%><br><br>
          <%= submit_tag "Log In"%>
       <%end%>
+      <br>
+      <p>Don't have an account?</p>
+      <%= button_to "Register", '/users/new', method: :get%>
    </div>
 </section>
