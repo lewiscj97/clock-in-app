@@ -1,8 +1,8 @@
 
 .login-box {
-  height: 20em;
+  height: 23em;
   width: 20em;
-  border-radius: 10%;
+  border-radius: 30px;
   display: flex;
   border-style: solid;
   border-width: 1px;

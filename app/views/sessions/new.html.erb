@@ -8,12 +8,12 @@
 <div class="login-background">
    <section class="container">
       <div class="login-box">
-         <h2 class="custom-title-text">Clock In App</h2>
-         <h1>Login</h1>
+         <h1 class="custom-title-text">Clock In App</h1>
+         <h3>Login</h3>
          <%= form_tag '/login' do %>
-            <%= label_tag :email%>
+            <%= label_tag :email%><br>
             <%= text_field_tag :email %><br><br>
-            <%= label_tag :password%>
+            <%= label_tag :password%><br>
             <%= password_field_tag :password%><br><br>
             <%= submit_tag "Log In"%>
          <%end%>
