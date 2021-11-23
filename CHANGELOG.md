@@ -1,5 +1,11 @@
 # Changelog
 
+## 23/11/21
+
+* feature/incorrect-login-flash-message
+  * Added incorrect login flash message
+  * Wrote test to check for it
+
 ## 22/11/21
 
 * feature/updated-one-click-button
