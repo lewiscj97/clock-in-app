@@ -1,5 +1,11 @@
 # Changelog
 
+## 23/11/21
+
+* feature/format_current_entry_time_on_edit_view
+  * Fixed breaking bug which was due to the `.first_or_create` method used when editing entries. If the user edited a blank entry and did not complete the process, the site hit a null pointer exception. This was fixed by using `.first_or_initialize`, which does not create a new value until the user enters a new time
+  * 
+
 ## 22/11/21
 
 * feature/updated-one-click-button
