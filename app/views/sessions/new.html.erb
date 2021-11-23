@@ -6,8 +6,10 @@
          <%= text_field_tag :email %><br><br>
          <%= label_tag :password%>
          <%= password_field_tag :password%><br><br>
-         <%= submit_tag "Log In", class: 'welcome-button'%>
+         <%= submit_tag "Log In"%>
       <%end%>
-      <%= button_to "Register", '/users/new', method: :get, class: 'welcome-button' %><p>if you don't have an account</p>
+      <br>
+      <p>IF YOU DON'T HAVE AN ACCOUNT</p>
+      <%= button_to "Register", '/users/new', method: :get%>
    </div>
 </section>
