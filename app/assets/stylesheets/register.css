@@ -11,19 +11,6 @@
   text-align: center;
 }
 
-.register-title-text {
-  margin-bottom: 0%;
-}
-
-.register-background {
-  position: fixed;
-  width: 105%;
-  margin: -2%;
-  height: 5000%; 
-  background-color: #cbeff5;
-  background-repeat: repeat;
-}
-
 .welcome-button {
   background-color: #cbeff5; 
   border: none;

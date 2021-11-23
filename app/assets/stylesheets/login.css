@@ -1,22 +1,14 @@
 
 .login-box {
-  height: 90%;
-  width: 20%;
+  height: 20em;
+  width: 20em;
   border-radius: 10%;
   display: flex;
-  border-style: groove;
+  border-style: solid;
+  border-width: 1px;
   flex-direction: column;
   background-color: white;
   text-align: center;
-}
-
-.login-background {
-  position: fixed;
-  width: 105%;
-  margin: -2%;
-  height: 5000%; 
-  background-color: #cbeff5;
-  background-repeat: repeat;
 }
 
 .welcome-button {
