@@ -1,6 +1,6 @@
 
 .register-box {
-  height: 32em;
+  height: 27em;
   width: 20em;
   border-radius: 10%;
   display: flex;
@@ -29,4 +29,12 @@
   background-color: #24d5f2;
   color: white;
   cursor: pointer;
+}
+
+#register-email-label {
+  margin-left: 2.2em;
+}
+
+#password-label {
+  margin-left: 0.35em;
 }
