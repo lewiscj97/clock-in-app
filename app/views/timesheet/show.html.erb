@@ -30,8 +30,16 @@
               <% end %>
             </tr>
           <% end %>
+          <tr>
+            <th>Total:</td>
+            <% @weekday_entries.each do |day| %>
+              <th><%= daily_total_time_worked(day) %></th>
+            <% end %>
+          </tr>
       </tbody>
     </table>
+
+    <h3 id='weekly-total-time'>Weekly Total: <%= weekly_total_time(@weekday_entries) %></h3>
 
     <%= button_to 'Export', show_timesheet_path(format: :xlsx), method: :get, class: 'timesheet-button' %>
 

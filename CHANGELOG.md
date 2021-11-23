@@ -15,6 +15,15 @@
 
 ## 22/11/21
 
+* feature/show-daily-total-times
+  * User is shown the total time they have worked for each day
+  * User shown the total time worked during the week
+
+Comments:
+* Daily time is shown when both values for AM, PM or both AM and PM are filled in
+
+## 22/11/21
+
 * feature/edit-timesheet-entries
   * User is able to edit an entry that they have already made
   * User is able to create a new entry where there is currently a blank entry
