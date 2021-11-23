@@ -6,6 +6,12 @@
   * Added incorrect login flash message
   * Wrote test to check for it
 
+## 23/11/21
+
+* feature/register-button-in-login
+  * added a register button on the login page
+  * updated css on login button
+
 ## 22/11/21
 
 * feature/updated-one-click-button

@@ -11,6 +11,14 @@ feature 'signing up' do
     click_button('Create Account')
     expect(page).to have_current_path('/entries')
   end 
+
+  feature 'register on login page' do
+    scenario 'a user can click register in the login page to go and create a new account' do
+      visit('/welcome')
+      click_button('Register')
+      expect(page).to have_current_path('/users/new')
+    end 
+  end
 end
 
 feature 'login' do
