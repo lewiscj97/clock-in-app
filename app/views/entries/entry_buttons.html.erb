@@ -2,10 +2,16 @@
    <div class="box">
       <h2><%= "Current time: #{Time.now.strftime("%H:%M")}" %></h2>
       <%= form_tag '/entries' do %>
-         <%= submit_tag "Make Entry", class: 'big-round-button' %> <br>
+         <% case current_user.entries.where(entry_date: Date.today).count%>
+         <% when 0, 2%>
+            <%=  submit_tag "Clock IN", class: 'big-round-button' %>
+         <% when 1, 3%>
+            <%=  submit_tag "Clock OUT", class: 'big-round-button' %>
+         <% else%>
+            <%=  submit_tag "COMPLETE", class: 'big-round-button-disabled', disabled: true %>
+         <% end%>
       <% end %>
-
       <br>
-      <%= flash[:too_many_entries] %>
+      <%= flash[:entries_message] %>
    </div>
 </section>
