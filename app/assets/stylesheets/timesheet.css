@@ -37,3 +37,14 @@
 .blank-row {
   height: 0.6em;
 }
+
+.table-header {
+  width: 8em;
+}
+
+@media (max-width: 800px) {
+  .timesheet-box {
+    height: 30em;
+  }
+  
+}
