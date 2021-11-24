@@ -46,6 +46,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #cbeff5;
+  overflow: hidden;
 }
 
 .custom-title-text {
@@ -174,8 +175,9 @@ body {
 }
 
 footer {
-  width: 99%;
+  width: 100%;
   position: absolute;
+  left: 0;
   bottom: 0;
   text-align: center;
 }
@@ -186,5 +188,5 @@ footer {
 }
 
 #about-link:hover {
-  color:rgb(131, 156, 173);
+  color: rgb(131, 156, 173);
 }
