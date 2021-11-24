@@ -9,7 +9,7 @@
     <table class='timesheet'>
       <thead>
         <tr>
-          <th scope='col'></th>
+          <th scope='col' class='table-header'></th>
           <th scope='col' class='table-header'>Monday</th>
           <th scope='col' class='table-header'>Tuesday</th>
           <th scope='col' class='table-header'>Wednesday</th>
@@ -23,9 +23,9 @@
               <th><%= @entry_types[i] %></td>
               <% for j in 0..4 do %>
                 <% if @weekday_entries[j].where(entry_type: i).empty? %>
-                  <td><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>>-</a></td>
+                  <td class='table-cell'><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>>-</a></td>
                 <% else %>
-                  <td><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></a></td>
+                  <td class='table-cell'><a class= 'table-value', href=<%="/timesheet/#{@year}/#{@week_number}/#{@weekdays[j]}/#{i}"%>><%= @weekday_entries[j].where(entry_type: i).first.entry_time.strftime('%H:%M')%></a></td>
                 <% end %>
               <% end %>
             </tr>

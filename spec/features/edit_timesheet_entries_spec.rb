@@ -18,7 +18,7 @@ feature 'Edit entries' do
   scenario 'A user can edit any entry on their timesheet' do
     visit('/timesheet/2021/46')
     click_on('09:01')
-    fill_in :time, with: '09:32'
+    fill_in :entry_entry_time, with: '09:32'
     click_button('Submit')
     expect(page).to have_current_path('/timesheet/2021/46')
     expect(page).to have_content('09:32')
@@ -28,9 +28,16 @@ feature 'Edit entries' do
     visit('/timesheet/2021/47')
     find(:xpath, "/html/body/section/div/table/tbody/tr[1]/td[1]/a").click
     expect(page).to have_current_path('/timesheet/2021/47/2021-11-22/0')
-    fill_in :time, with: '09:30'
+    fill_in :entry_entry_time, with: '09:30'
     click_button('Submit')
     expect(page).to have_current_path('/timesheet/2021/47')
     expect(page).to have_content('09:30')
+  end
+
+  scenario 'User is shown which date and entry type they are editing' do
+    visit('/timesheet/2021/47')
+    find(:xpath, "/html/body/section/div/table/tbody/tr[1]/td[1]/a").click
+    expect(page).to have_content('22/11/21')
+    expect(page).to have_content('AM Start')
   end
 end

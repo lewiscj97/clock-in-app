@@ -124,9 +124,10 @@ body {
   display: inline;
   margin-left: 0.5em;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-variant: small-caps;
   font-size: 1.5em;
   position: absolute;
-  top: -10%;
+  top: -17.5%;
 }
 
 @media (max-width: 800px) {
@@ -141,4 +142,11 @@ body {
   #navbar-title {
     visibility: hidden;
   }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

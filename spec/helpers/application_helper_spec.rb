@@ -66,4 +66,13 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(weekly_total_time(week)).to eq('0:00')
     end
   end
+
+  describe "#entry_type_to_string" do
+    it 'converts an entry type integer into its string' do
+      expect(entry_type_to_string(0)).to eq('AM Start')
+      expect(entry_type_to_string(1)).to eq('AM Finish')
+      expect(entry_type_to_string(2)).to eq('PM Start')
+      expect(entry_type_to_string(3)).to eq('PM Finish')
+    end
+  end
 end
