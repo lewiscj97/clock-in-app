@@ -35,6 +35,19 @@
   color: dodgerblue;
 }
 
+.table-value:hover {
+  color: black;
+}
+
+.table-cell {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.table-cell:hover {
+  background-color: #cbeff5;
+}
+
 .blank-row {
   height: 0.6em;
 }
@@ -45,11 +58,6 @@
 
 #week {
   width: 12em;
-}
-
-.table-cell {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
 }
 
 @media (max-width: 800px) {
