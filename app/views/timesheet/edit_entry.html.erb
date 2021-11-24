@@ -1,13 +1,12 @@
 <section class="container">
   <div class="edit-entry-box">
-    <h1>Edit Entry</h1>
-    <p>Entry: <%= format_date_yyyy_mm_dd_as_dd_mm_yy(params[:date]) %>, </p>
+    <h1 class='custom-title-text'>Edit Entry</h1>
+    <h3><%= "#{format_date_yyyy_mm_dd_as_dd_mm_yy(params[:date])} - #{entry_type_to_string(params[:entry_type].to_i)}" %></h3>
     <%= form_for @entry, url: '/timesheet/edit' do |f|%>
       <%= hidden_field_tag 'entry_date', @entry.entry_date %>
       <%= hidden_field_tag 'entry_type', @entry.entry_type %>
       <%= hidden_field_tag 'year', params[:year] %>
       <%= hidden_field_tag 'week', params[:week_number] %>
-      <%= f.label :entry_time %><br>
       <%= f.time_field :entry_time %><br>
       <%= f.submit 'Submit', class: 'timesheet-button'%>
     <% end %>
