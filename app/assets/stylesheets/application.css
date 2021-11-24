@@ -24,6 +24,24 @@
   text-align: center;
 }
 
+.about-us-box {
+  margin-top: 3em;
+  height: 35em;
+  width: 40em;
+  border-radius: 30px;
+  display: flex;
+  border-style: solid;
+  border-width: 1px;
+  flex-direction: column;
+  background-color: white;
+  text-align: center;
+}
+
+.about-text {
+  text-align: left;
+  padding: 0 2em;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #cbeff5;
@@ -142,11 +160,21 @@ body {
   #navbar-title {
     visibility: hidden;
   }
+
+  .about-us-box {
+    height:max-content;
+    margin-top: 0em;
+  }
+
+  .about-text {
+    text-align: left;
+    padding: 0 1em;
+  }
 }
 
 footer {
-  position: fixed;
+  width: 99%;
+  position: absolute;
   bottom: 0;
-  width: 100%;
   text-align: center;
 }
