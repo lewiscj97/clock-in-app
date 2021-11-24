@@ -26,7 +26,7 @@
 
 .about-us-box {
   margin-top: 3em;
-  height: 35em;
+  height: 38em;
   width: 40em;
   border-radius: 30px;
   display: flex;
@@ -39,7 +39,8 @@
 
 .about-text {
   text-align: left;
-  padding: 0 2em;
+  padding: 1em;
+  line-height: 1.5;
 }
 
 body {
@@ -162,7 +163,7 @@ body {
   }
 
   .about-us-box {
-    height:max-content;
+    height: 39em;
     margin-top: 0em;
   }
 
