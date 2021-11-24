@@ -7,7 +7,7 @@ feature 'Navigation bar' do
     visit('/entries')
     expect(page).to have_link 'Clock In/Out'
     expect(page).to have_link 'Timesheets'
-    expect(page).to have_link 'Sign Out'
+    expect(page).to have_link 'Log Out'
   end
 
   scenario 'Timesheets button works' do
@@ -25,10 +25,10 @@ feature 'Navigation bar' do
 
   scenario 'Sign Out button works' do
     visit('/entries')
-    click_link('Sign Out')
+    click_link('Log Out')
     expect(page).to have_current_path('/welcome')
     expect(page).to have_no_link('/Clock In/Out')
     expect(page).to have_no_link('/Timesheets')
-    expect(page).to have_no_link('/Sign Out')
+    expect(page).to have_no_link('/Log Out')
   end
 end 
