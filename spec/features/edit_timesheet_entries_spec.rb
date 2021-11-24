@@ -33,4 +33,11 @@ feature 'Edit entries' do
     expect(page).to have_current_path('/timesheet/2021/47')
     expect(page).to have_content('09:30')
   end
+
+  scenario 'User is shown which date and entry type they are editing' do
+    visit('/timesheet/2021/47')
+    find(:xpath, "/html/body/section/div/table/tbody/tr[1]/td[1]/a").click
+    expect(page).to have_content('22/11/21')
+    expect(page).to have_content('AM Start')
+  end
 end
