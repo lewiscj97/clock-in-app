@@ -1,6 +1,6 @@
 .timesheet-box {
   margin-top: 3em;
-  height: 26em;
+  height: 28em;
   width: 50em;
   border-radius: 30px;
   display: flex;
@@ -45,6 +45,11 @@
 
 #week {
   width: 12em;
+}
+
+.table-cell {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 
 @media (max-width: 800px) {
