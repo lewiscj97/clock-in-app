@@ -4,7 +4,7 @@
     <h3>Register</h3>
     <%= form_for @user do |f|%>
       <%= f.label :email, value: 'Email:', id: 'register-email-label'%>
-      <%= f.email_field :email,  required: true %><br><br>
+      <%= f.email_field :email, required: true %><br><br>
       <%= f.label :first_name, value: 'First name:', id: 'fname-label'%>
       <%= f.text_field :first_name, required: true %><br><br>
       <%= f.label :last_name, value: 'Last name:', id: 'lname-label'%>
