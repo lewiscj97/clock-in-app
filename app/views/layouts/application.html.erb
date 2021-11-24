@@ -16,9 +16,12 @@
       <% if logged_in? %>
         <li class="navbar-push"><a class='navbar-link' href='/entries'>Clock In/Out</a></li>
         <li><a class='navbar-link' href='/timesheet/current'>Timesheets</a></li>
-        <li><a class='navbar-link' href='/logout'>Sign Out</a></li>
+        <li><a class='navbar-link' href='/logout'>Log Out</a></li>
       <% end %>
     </ul>
     <%= yield %>
+    <footer>
+      <p class="copyright">Clock in Cats © 2021</p>
+    </footer>
   </body>
 </html>
