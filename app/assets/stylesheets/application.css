@@ -26,7 +26,7 @@
 
 .about-us-box {
   margin-top: 3em;
-  height: 38em;
+  height: 36em;
   width: 40em;
   border-radius: 30px;
   display: flex;
@@ -39,7 +39,7 @@
 
 .about-text {
   text-align: left;
-  padding: 1em;
+  padding: 0.5em 1em;
   line-height: 1.5;
 }
 
@@ -163,7 +163,7 @@ body {
   }
 
   .about-us-box {
-    height: 39em;
+    height: 40em;
     margin-top: 0em;
   }
 
@@ -178,4 +178,13 @@ footer {
   position: absolute;
   bottom: 0;
   text-align: center;
+}
+
+#about-link {
+  text-decoration: none;
+  color: rgb(39, 39, 39);
+}
+
+#about-link:hover {
+  color:rgb(131, 156, 173);
 }
