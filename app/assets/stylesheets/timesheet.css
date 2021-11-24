@@ -1,6 +1,6 @@
 .timesheet-box {
   margin-top: 3em;
-  height: 26em;
+  height: 28em;
   width: 50em;
   border-radius: 30px;
   display: flex;
@@ -33,6 +33,19 @@
 .table-value {
   text-decoration: none;
   color: dodgerblue;
+}
+
+.table-value:hover {
+  color: black;
+}
+
+.table-cell {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.table-cell:hover {
+  background-color: #cbeff5;
 }
 
 .blank-row {

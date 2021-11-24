@@ -1,5 +1,12 @@
 # Changelog
 
+## 24/11/21
+
+* style/edit-entries-page
+  * Edit entries view styled to be consistent with other views
+  * User is shown the date and entry type that they are editing
+  * Styling applied to the timesheet, adding some padding and extra style when hovering over entries
+
 ## 23/11/21
 
 * feature/format_current_entry_time_on_edit_view

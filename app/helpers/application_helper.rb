@@ -36,6 +36,19 @@ module ApplicationHelper
     format_minutes_in_hhmm(total)
   end
 
+  def entry_type_to_string(entry_type)
+    case entry_type
+    when 0
+      "AM Start"
+    when 1
+      "AM Finish"
+    when 2
+      "PM Start"
+    when 3
+      "PM Finish"
+    end
+  end
+
   private
 
   def format_minutes_in_hhmm(minutes)

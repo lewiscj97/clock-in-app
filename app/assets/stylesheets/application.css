@@ -138,6 +138,10 @@ body {
   .navbar {
     font-size: 0.9em;
   }
+
+  #navbar-title {
+    visibility: hidden;
+  }
 }
 
 footer {
