@@ -172,6 +172,10 @@ body {
     text-align: left;
     padding: 0 1em;
   }
+
+  .wide {
+    width: 90%;
+  }
 }
 
 footer {
