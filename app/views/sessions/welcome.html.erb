@@ -6,8 +6,8 @@
             <h1>You are Logged In, <%= current_user.first_name %></h1>
             <%= button_to "Sign out", '/logout', method: :get, class: 'welcome-button'%>
         <% else %>
-            <%= button_to "Log In", '/login', method: :get, class: 'welcome-button wide' %>
-            <%= button_to "Register", '/users/new', method: :get, class: 'welcome-button wide' %>
+            <%= button_to "Log In", '/login', method: :get, class: 'welcome-button less-wide' %>
+            <%= button_to "Register", '/users/new', method: :get, class: 'welcome-button less-wide' %>
         <% end %>
     </div>
 </section>
