@@ -176,6 +176,10 @@ body {
   .wide {
     width: 90%;
   }
+
+  .less-wide {
+    width: 75%;
+  }
 }
 
 footer {
