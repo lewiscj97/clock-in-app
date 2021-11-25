@@ -42,10 +42,10 @@
 
     <h3 id='weekly-total-time'>Weekly Total: <%= weekly_total_time(@weekday_entries) %></h3>
 
-    <%= button_to 'Export', show_timesheet_path(format: :xlsx), method: :get, class: 'timesheet-button' %>
+    <%= button_to 'Export', show_timesheet_path(format: :xlsx), method: :get, class: 'timesheet-button wide' %>
 
     <form action='/entries'>
-      <input class='timesheet-button' type='submit' value='Back'>
+      <input class='timesheet-button wide' type='submit' value='Back'>
     </form>
   </div>
 </section>
